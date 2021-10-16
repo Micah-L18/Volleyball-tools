@@ -1,6 +1,4 @@
-import PanelManager.PanelOne;
 import PanelManager.PracticeFormat;
-import PracticeType.SkillPractice;
 
 import javax.swing.*;
 import java.awt.*;

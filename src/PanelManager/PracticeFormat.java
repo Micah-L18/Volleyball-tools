@@ -1,6 +1,6 @@
 package PanelManager;
 
-import PracticeType.SkillPractice;
+import PracticeType.PracticeSelect;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,10 +12,10 @@ public class PracticeFormat {
     scrollable panel on left
     press button = larger panel on right displays format, with a select button at the bottum
      */
-
-    SkillPractice SP = new SkillPractice();
-
+    PracticeSelect SP = new PracticeSelect();
+    int i =1;
     public void selectType(JPanel mainPanel, JPanel TypeSelect,JPanel TypeDetails){
+
         Color myblue = new Color(0, 36, 172);
         Color mybackground = new Color(246, 246, 246);
 
@@ -100,9 +100,9 @@ public class PracticeFormat {
         skillPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                SP.details(finalTypeDetails);
                 mainPanel.repaint();
+
+                    SP.skillpractice(finalTypeDetails);
 
             }
         });
@@ -110,7 +110,8 @@ public class PracticeFormat {
         speedPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                mainPanel.repaint();
+                SP.speedPractice(finalTypeDetails);
                // selectDetails(mainPanel,TypeDetails);
             }
         });
@@ -118,7 +119,8 @@ public class PracticeFormat {
         lightPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                mainPanel.repaint();
+                SP.lightPractice(finalTypeDetails);
                 // selectDetails(mainPanel,TypeDetails);
             }
         });
@@ -126,7 +128,8 @@ public class PracticeFormat {
         heavyPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                mainPanel.repaint();
+                SP.heavyPractice(finalTypeDetails);
                 // selectDetails(mainPanel,TypeDetails);
             }
         });
@@ -134,7 +137,8 @@ public class PracticeFormat {
         PreTournament.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                mainPanel.repaint();
+                SP.PreTournament(finalTypeDetails);
                 // selectDetails(mainPanel,TypeDetails);
             }
         });
@@ -142,7 +146,8 @@ public class PracticeFormat {
         PostTournament.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                mainPanel.repaint();
+                SP.PostTournament(finalTypeDetails);
                 // selectDetails(mainPanel,TypeDetails);
             }
         });
@@ -150,7 +155,8 @@ public class PracticeFormat {
         SystemPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                mainPanel.repaint();
+                SP.SystemPractice(finalTypeDetails);
                 // selectDetails(mainPanel,TypeDetails);
             }
         });
@@ -158,7 +164,8 @@ public class PracticeFormat {
         TeamBuildingPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                mainPanel.repaint();
+                SP.TeamBuildingPractice(finalTypeDetails);
                 // selectDetails(mainPanel,TypeDetails);
             }
         });
