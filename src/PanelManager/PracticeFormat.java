@@ -1,19 +1,23 @@
 package PanelManager;
 
+import PracticeType.SkillPractice;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PracticeFormat {
-
     /*
     scrollable panel on left
     press button = larger panel on right displays format, with a select button at the bottum
      */
 
-    public void selectType(JPanel panel, JPanel TypeSelect){
+    SkillPractice SP = new SkillPractice();
+
+    public void selectType(JPanel mainPanel, JPanel TypeSelect,JPanel TypeDetails){
         Color myblue = new Color(0, 36, 172);
+        Color mybackground = new Color(246, 246, 246);
 
         TypeSelect = new JPanel();
         TypeSelect.setVisible(true);
@@ -21,32 +25,151 @@ public class PracticeFormat {
         TypeSelect.setBackground(myblue);
         TypeSelect.setLayout(null);
 
-        panel.add(TypeSelect);
+        TypeDetails = new JPanel();
+        TypeDetails.setVisible(true);
+        TypeDetails.setBounds(300,0,980,720);
+        TypeDetails.setBackground(mybackground);
+        mainPanel.add(TypeDetails);
+
+        mainPanel.add(TypeSelect);
 
         JButton skillPractice= new JButton();
+        JButton speedPractice= new JButton();
+        JButton lightPractice= new JButton();
+        JButton heavyPractice= new JButton();
+        JButton PreTournament= new JButton();
+        JButton PostTournament= new JButton();
+        JButton SystemPractice= new JButton();
+        JButton TeamBuildingPractice= new JButton();
 
         skillPractice.setVisible(true);
+        speedPractice.setVisible(true);
+        lightPractice.setVisible(true);
+        heavyPractice.setVisible(true);
+        PreTournament.setVisible(true);
+        PostTournament.setVisible(true);
+        SystemPractice.setVisible(true);
+        TeamBuildingPractice.setVisible(true);
+
         skillPractice.setBackground(Color.white);
+        speedPractice.setBackground(Color.white);
+        lightPractice.setBackground(Color.white);
+        heavyPractice.setBackground(Color.white);
+        PreTournament.setBackground(Color.white);
+        PostTournament.setBackground(Color.white);
+        SystemPractice.setBackground(Color.white);
+        TeamBuildingPractice.setBackground(Color.white);
+
+        skillPractice.setForeground(myblue);
+        speedPractice.setForeground(myblue);
+        lightPractice.setForeground(myblue);
+        heavyPractice.setForeground(myblue);
+        PreTournament.setForeground(myblue);
+        PostTournament.setForeground(myblue);
+        SystemPractice.setForeground(myblue);
+        TeamBuildingPractice.setForeground(myblue);
+
         skillPractice.setBounds(25,25,250,50);
+        speedPractice.setBounds(25,100,250,50);
+        lightPractice.setBounds(25,175,250,50);
+        heavyPractice.setBounds(25,250,250,50);
+        PreTournament.setBounds(25,325,250,50);
+        PostTournament.setBounds(25,400,250,50);
+        SystemPractice.setBounds(25,475,250,50);
+        TeamBuildingPractice.setBounds(25,550,250,50);
+
         skillPractice.setText("Skill Practice");
+        speedPractice.setText("Speed Practice");
+        lightPractice.setText("Light Practice");
+        heavyPractice.setText("Heavy Practice");
+        PreTournament.setText("Pre Practice");
+        PostTournament.setText("Post Practice");
+        SystemPractice.setText("System Practice");
+        TeamBuildingPractice.setText("TeamBuilding Practice");
+
+        skillPractice.setToolTipText("");
+        speedPractice.setToolTipText("");
+        lightPractice.setToolTipText("");
+        heavyPractice.setToolTipText("");
+        PreTournament.setToolTipText("");
+        PostTournament.setToolTipText("");
+        SystemPractice.setToolTipText("");
+        TeamBuildingPractice.setToolTipText("");
+
         skillPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+             //   SP.details(TypeDetails);
+                mainPanel.repaint();
+
+            }
+        });
+
+        speedPractice.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+               // selectDetails(mainPanel,TypeDetails);
+            }
+        });
+
+        lightPractice.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // selectDetails(mainPanel,TypeDetails);
+            }
+        });
+
+        heavyPractice.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // selectDetails(mainPanel,TypeDetails);
+            }
+        });
+
+        PreTournament.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // selectDetails(mainPanel,TypeDetails);
+            }
+        });
+
+        PostTournament.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // selectDetails(mainPanel,TypeDetails);
+            }
+        });
+
+        SystemPractice.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // selectDetails(mainPanel,TypeDetails);
+            }
+        });
+
+        TeamBuildingPractice.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // selectDetails(mainPanel,TypeDetails);
             }
         });
 
         TypeSelect.add(skillPractice);
-
-    }
-
-    public void selectDetails(JPanel panel, JPanel TypeDetails){
-
-        TypeDetails = new JPanel();
-        TypeDetails.setVisible(true);
-        TypeDetails.setBounds(300,0,980,720);
-        TypeDetails.setBackground(Color.white);
-        panel.add(TypeDetails);
+        TypeSelect.add(lightPractice);
+        TypeSelect.add(heavyPractice);
+        TypeSelect.add(PreTournament);
+        TypeSelect.add(PostTournament);
+        TypeSelect.add(speedPractice);
+        TypeSelect.add(SystemPractice);
+        TypeSelect.add(TeamBuildingPractice);
 
     }
 
