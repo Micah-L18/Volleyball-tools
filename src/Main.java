@@ -24,7 +24,7 @@ public class Main {
 
         mainPanel.setVisible(false);
         mainPanel.setBounds(0,0,1280,720);
-        mainPanel.setBackground(Color.white);
+        mainPanel.setBackground(myblue);
         mainPanel.setLayout(null);
 
         JFrame frame = new JFrame();
@@ -33,6 +33,7 @@ public class Main {
         frame.setIconImage(icon);
         frame.setSize(1280,720);
         frame.setResizable(false);
+        frame.setBackground(myblue);
         frame.setTitle("Practice Planner");
         frame.setLayout(null);
 
@@ -41,8 +42,8 @@ public class Main {
         JButton plan = new JButton();
 
         plan.setVisible(true);
-        plan.setBackground(myblue);
-        plan.setForeground(Color.white);
+        plan.setBackground(Color.white);
+        plan.setForeground(myblue);
         plan.setBounds(580,360,120,45);
         plan.setText("Plan Practice");
         plan.addActionListener(new ActionListener() {

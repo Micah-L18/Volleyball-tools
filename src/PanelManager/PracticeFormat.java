@@ -96,11 +96,12 @@ public class PracticeFormat {
         SystemPractice.setToolTipText("");
         TeamBuildingPractice.setToolTipText("");
 
+        JPanel finalTypeDetails = TypeDetails;
         skillPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-             //   SP.details(TypeDetails);
+                SP.details(finalTypeDetails);
                 mainPanel.repaint();
 
             }
