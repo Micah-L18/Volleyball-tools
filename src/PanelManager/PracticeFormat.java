@@ -13,7 +13,7 @@ public class PracticeFormat {
     press button = larger panel on right displays format, with a select button at the bottum
      */
     PracticeSelect SP = new PracticeSelect();
-    int i =1;
+    int bob = 0;
     public void selectType(JPanel mainPanel, JPanel TypeSelect,JPanel TypeDetails){
 
         Color myblue = new Color(0, 36, 172);
@@ -27,6 +27,7 @@ public class PracticeFormat {
 
         TypeDetails = new JPanel();
         TypeDetails.setVisible(true);
+        TypeDetails.setLayout(null);
         TypeDetails.setBounds(300,0,980,720);
         TypeDetails.setBackground(mybackground);
         mainPanel.add(TypeDetails);
@@ -87,7 +88,7 @@ public class PracticeFormat {
         SystemPractice.setText("System Practice");
         TeamBuildingPractice.setText("TeamBuilding Practice");
 
-        skillPractice.setToolTipText("");
+        skillPractice.setToolTipText("skill based practice");
         speedPractice.setToolTipText("");
         lightPractice.setToolTipText("");
         heavyPractice.setToolTipText("");
@@ -96,13 +97,24 @@ public class PracticeFormat {
         SystemPractice.setToolTipText("");
         TeamBuildingPractice.setToolTipText("");
 
+        SP.displayFormat(TypeDetails);
+
         JPanel finalTypeDetails = TypeDetails;
+        JPanel finalTypeSelect = TypeSelect;
+        JButton select = new JButton();
+
+        select.setVisible(false);
+        select.setBackground(myblue);
+        select.setForeground(Color.white);
+        select.setText("Select");
+        select.setBounds(400,600,120,45);
+
         skillPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainPanel.repaint();
 
-                    SP.skillpractice(finalTypeDetails);
+                select.setVisible(true);
+                SP.skillpractice(finalTypeDetails,finalTypeSelect,select);
 
             }
         });
@@ -110,63 +122,57 @@ public class PracticeFormat {
         speedPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainPanel.repaint();
-                SP.speedPractice(finalTypeDetails);
-               // selectDetails(mainPanel,TypeDetails);
+                SP.speedPractice(finalTypeDetails,finalTypeSelect,select);
+                select.setVisible(true);
+
             }
         });
 
         lightPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainPanel.repaint();
-                SP.lightPractice(finalTypeDetails);
-                // selectDetails(mainPanel,TypeDetails);
+                SP.lightPractice(finalTypeDetails,finalTypeSelect,select);
+                select.setVisible(true);
             }
         });
 
         heavyPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainPanel.repaint();
-                SP.heavyPractice(finalTypeDetails);
-                // selectDetails(mainPanel,TypeDetails);
+                SP.heavyPractice(finalTypeDetails,finalTypeSelect,select);
+                select.setVisible(true);
             }
         });
 
         PreTournament.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainPanel.repaint();
-                SP.PreTournament(finalTypeDetails);
-                // selectDetails(mainPanel,TypeDetails);
+                SP.PreTournament(finalTypeDetails,finalTypeSelect,select);
+                select.setVisible(true);
             }
         });
 
         PostTournament.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainPanel.repaint();
-                SP.PostTournament(finalTypeDetails);
-                // selectDetails(mainPanel,TypeDetails);
+                SP.PostTournament(finalTypeDetails,finalTypeSelect,select);
+                select.setVisible(true);
             }
         });
 
         SystemPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainPanel.repaint();
-                SP.SystemPractice(finalTypeDetails);
-                // selectDetails(mainPanel,TypeDetails);
+                SP.SystemPractice(finalTypeDetails,finalTypeSelect,select);
+                select.setVisible(true);
             }
         });
 
         TeamBuildingPractice.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainPanel.repaint();
-                SP.TeamBuildingPractice(finalTypeDetails);
-                // selectDetails(mainPanel,TypeDetails);
+                SP.TeamBuildingPractice(finalTypeDetails,finalTypeSelect,select);
+                select.setVisible(true);
             }
         });
 
@@ -178,6 +184,7 @@ public class PracticeFormat {
         TypeSelect.add(speedPractice);
         TypeSelect.add(SystemPractice);
         TypeSelect.add(TeamBuildingPractice);
+        TypeDetails.add(select);
 
     }
 

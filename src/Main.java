@@ -11,7 +11,14 @@ public class Main {
     public static JPanel TypeSelect;
     public static  JPanel TypeDetails;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(Main::run);
+
+    }
+
+    public static void run(){
+
         Image icon = Toolkit.getDefaultToolkit().getImage("D:\\Github\\Volleyball-tools\\src\\icon.png");
 
         Color myblue = new Color(0, 36, 172);
