@@ -1,5 +1,7 @@
 package PracticeType;
 
+import TestingStuff.PracticePlanner;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -154,9 +156,12 @@ public class PracticeSelect {
             select.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    PlanPractice sp = new PlanPractice();
-                    sp.planSkillPractice(TypeDetails,TypeSelect);
+                   // PlanPractice sp = new PlanPractice();
+                   // sp.planSkillPractice(TypeDetails,TypeSelect);
                     select.setVisible(false);
+                    PracticePlanner sp = new PracticePlanner();
+                    sp.planSkill(TypeDetails,TypeSelect);
+
                 }
 
             });
