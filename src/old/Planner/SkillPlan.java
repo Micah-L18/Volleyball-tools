@@ -6,15 +6,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SkillPlan {
+    //look at these fonts?
+    // https://alvinalexander.com/blog/post/jfc-swing/swing-faq-list-fonts-current-platform/
+
+    Font font1 = new Font("rockwell", Font.BOLD, 30);
+
     Color myblue = new Color(0, 36, 172);
+
     public void details(JPanel TypeSelect){
 
         JLabel labelMain = new JLabel();
             labelMain.setVisible(true);
-            labelMain.setBounds(5,5,150,120);
+            labelMain.setBounds(25,0,300,75);
             labelMain.setText("Practice Details");
             labelMain.setForeground(Color.white);
             labelMain.setBackground(Color.white);
+            labelMain.setFont(font1);
 
         JLabel skillFocusLabel = new JLabel();
             skillFocusLabel.setVisible(true);
@@ -29,6 +36,19 @@ public class SkillPlan {
             skillFocus.setForeground(myblue);
             skillFocus.setBackground(Color.white);
 
+        JLabel notelabel = new JLabel();
+            notelabel.setVisible(true);
+            notelabel.setBounds(35,55,150,120);
+            notelabel.setText("Skill Focus");
+            notelabel.setForeground(Color.white);
+            notelabel.setBackground(Color.white);
+
+        JTextArea notes = new JTextArea();
+            notes.setVisible(true);
+            notes.setBounds(125,325,325,325);
+            notes.setForeground(myblue);
+            notes.setBackground(Color.white);
+
         JButton next = new JButton();
             next.setVisible(true);
             next.setBackground(Color.white);
@@ -42,6 +62,8 @@ public class SkillPlan {
                     prePractice(TypeSelect);
                 }
             });
+
+        TypeSelect.add(notes);
         TypeSelect.add(skillFocusLabel);
         TypeSelect.add(skillFocus);
         TypeSelect.add(next);
@@ -52,10 +74,12 @@ public class SkillPlan {
     public void prePractice(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
         labelMain.setVisible(true);
-        labelMain.setBounds(5,5,150,120);
+        labelMain.setBounds(25,0,300,75);
         labelMain.setText("Pre Practice");
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
+        labelMain.setFont(font1);
+
 
         JButton next = new JButton();
 
@@ -97,10 +121,11 @@ public class SkillPlan {
     public void warmup(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
         labelMain.setVisible(true);
-        labelMain.setBounds(5,5,150,120);
+        labelMain.setBounds(25,0,300,75);
         labelMain.setText("Warmup");
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
+        labelMain.setFont(font1);
 
         JButton next = new JButton();
 
@@ -142,10 +167,12 @@ public class SkillPlan {
     public void skill(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
         labelMain.setVisible(true);
-        labelMain.setBounds(5,5,150,120);
+        labelMain.setBounds(25,0,300,75);
         labelMain.setText("Teach Skill");
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
+        labelMain.setFont(font1);
+
 
         JButton next = new JButton();
 
@@ -185,10 +212,12 @@ public class SkillPlan {
     public void training(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
         labelMain.setVisible(true);
-        labelMain.setBounds(5,5,150,120);
+        labelMain.setBounds(25,0,300,75);
         labelMain.setText("Training Skill");
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
+        labelMain.setFont(font1);
+
 
         JButton next = new JButton();
 
@@ -229,10 +258,12 @@ public class SkillPlan {
     public void control(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
         labelMain.setVisible(true);
-        labelMain.setBounds(5,5,150,120);
+        labelMain.setBounds(25,0,300,75);
         labelMain.setText("Control Skill");
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
+        labelMain.setFont(font1);
+
 
         JButton next = new JButton();
 
@@ -273,10 +304,12 @@ public class SkillPlan {
     public void execute(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
         labelMain.setVisible(true);
-        labelMain.setBounds(5,5,150,120);
+        labelMain.setBounds(25,0,300,75);
         labelMain.setText("Execute Skill");
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
+        labelMain.setFont(font1);
+
 
         JButton next = new JButton();
 
@@ -317,10 +350,12 @@ public class SkillPlan {
     public void impalement(JPanel TypeSelect) {
         JLabel labelMain = new JLabel();
         labelMain.setVisible(true);
-        labelMain.setBounds(5,5,150,120);
+        labelMain.setBounds(25,0,300,75);
         labelMain.setText("Implement Skill");
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
+        labelMain.setFont(font1);
+
 
         JButton next = new JButton();
 
@@ -361,10 +396,12 @@ public class SkillPlan {
     public void play(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
         labelMain.setVisible(true);
-        labelMain.setBounds(5,5,150,120);
+        labelMain.setBounds(25,0,300,75);
         labelMain.setText("Play");
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
+        labelMain.setFont(font1);
+
 
         JButton PREVIEW = new JButton();
 
