@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager">
+    <output url="file://$USER_HOME$/Desktop/volleyball planner" />
+    <output-test url="file://$USER_HOME$/Desktop/test volleyball" />
     <exclude-output />
+    <content url="file://$USER_HOME$/Desktop/test volleyball">
+      <sourceFolder url="file://$USER_HOME$/Desktop/test volleyball" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>

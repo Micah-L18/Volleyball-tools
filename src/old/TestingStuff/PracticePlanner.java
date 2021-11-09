@@ -42,6 +42,8 @@ public class PracticePlanner {
         TypeDetails.setLayout(null);
         TypeDetails.removeAll();
 
+        planable.details(TypeSelect);
+
         practiceDetails.setVisible(true);
         practiceDetails.setText("Practice Details");
         practiceDetails.setBounds(50,25,200,50);
