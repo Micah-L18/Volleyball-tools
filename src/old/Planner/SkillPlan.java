@@ -108,42 +108,42 @@ public class SkillPlan {
         JLabel stretchLabel = new JLabel();
             stretchLabel.setForeground(Color.white);
             stretchLabel.setVisible(true);
-            stretchLabel.setBounds(100,100,100,100);
+            stretchLabel.setBounds(125,75,100,100);
             stretchLabel.setText("Stretch Order");
             stretchLabel.setFont(font2);
 
         JLabel conditionLabel = new JLabel();
             conditionLabel.setForeground(Color.white);
             conditionLabel.setVisible(true);
-            conditionLabel.setBounds(100,200,100,100);
+            conditionLabel.setBounds(425,75,100,100);
             conditionLabel.setText("Conditioning");
             conditionLabel.setFont(font2);
 
         JLabel CoordinationLabel = new JLabel();
             CoordinationLabel.setForeground(Color.white);
             CoordinationLabel.setVisible(true);
-            CoordinationLabel.setBounds(100,300,100,100);
+            CoordinationLabel.setBounds(700,75,150,100);
             CoordinationLabel.setText("Coordination Order");
             CoordinationLabel.setFont(font2);
 
         JTextArea StreatchList = new JTextArea();
             StreatchList.setVisible(true);
             StreatchList.setFont(font2);
-            StreatchList.setBounds(125,100,325,30);
+            StreatchList.setBounds(50,140,250,450);
             StreatchList.setForeground(myblue);
             StreatchList.setBackground(Color.white);
 
         JTextArea ConditionList = new JTextArea();
             ConditionList.setVisible(true);
             ConditionList.setFont(font2);
-            ConditionList.setBounds(125,100,325,30);
+            ConditionList.setBounds(350,140,250,450);
             ConditionList.setForeground(myblue);
             ConditionList.setBackground(Color.white);
 
         JTextArea CoordinationList = new JTextArea();
             CoordinationList.setVisible(true);
             CoordinationList.setFont(font2);
-            CoordinationList.setBounds(125,100,325,30);
+            CoordinationList.setBounds(650,140,250,450);
             CoordinationList.setForeground(myblue);
             CoordinationList.setBackground(Color.white);
 
@@ -176,7 +176,7 @@ public class SkillPlan {
             });
 
         TypeSelect.add(ConditionList);
-        TypeSelect.add(ConditionList);
+        TypeSelect.add(CoordinationList);
         TypeSelect.add(StreatchList);
         TypeSelect.add(CoordinationLabel);
         TypeSelect.add(conditionLabel);
