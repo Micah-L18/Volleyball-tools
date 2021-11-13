@@ -43,6 +43,54 @@ public class PracticeFormat {
         JButton SystemPractice= new JButton();
         JButton TeamBuildingPractice= new JButton();
 
+        skillPractice.setOpaque(true);
+        speedPractice.setOpaque(true);
+        lightPractice.setOpaque(true);
+        heavyPractice.setOpaque(true);
+        PostTournament.setOpaque(true);
+        PreTournament.setOpaque(true);
+        SystemPractice.setOpaque(true);
+        TeamBuildingPractice.setOpaque(true);
+
+        skillPractice.setBorderPainted(false);
+        speedPractice.setBorderPainted(false);
+        lightPractice.setBorderPainted(false);
+        heavyPractice.setBorderPainted(false);
+        PreTournament.setBorderPainted(false);
+        PostTournament.setBorderPainted(false);
+        SystemPractice.setBorderPainted(false);
+        TeamBuildingPractice.setBorderPainted(false);
+
+/*
+        skillPractice.setBorderPainted(false);
+        speedPractice.setBorderPainted(false);
+        lightPractice.setBorderPainted(false);
+        heavyPractice.setBorderPainted(false);
+        PreTournament.setBorderPainted(false);
+        PostTournament.setBorderPainted(false);
+        SystemPractice.setBorderPainted(false);
+        TeamBuildingPractice.setBorderPainted(false);
+
+        skillPractice.setFocusPainted(false);
+        speedPractice.setFocusPainted(false);
+        lightPractice.setFocusPainted(false);
+        heavyPractice.setFocusPainted(false);
+        PreTournament.setFocusPainted(false);
+        PostTournament.setFocusPainted(false);
+        SystemPractice.setFocusPainted(false);
+        TeamBuildingPractice.setFocusPainted(false);
+
+        skillPractice.setContentAreaFilled(false);
+        speedPractice.setContentAreaFilled(false);
+        lightPractice.setContentAreaFilled(false);
+        heavyPractice.setContentAreaFilled(false);
+        PreTournament.setContentAreaFilled(false);
+        PostTournament.setContentAreaFilled(false);
+        SystemPractice.setContentAreaFilled(false);
+        TeamBuildingPractice.setContentAreaFilled(false);
+
+        */
+
         skillPractice.setVisible(true);
         speedPractice.setVisible(true);
         lightPractice.setVisible(true);

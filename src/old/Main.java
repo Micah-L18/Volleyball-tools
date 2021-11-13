@@ -47,21 +47,19 @@ public class Main {
         JButton plan = new JButton();
 
         plan.setVisible(true);
-        plan.setBackground(Color.white);
-        plan.setForeground(myblue);
-        plan.setBounds(580,360,120,45);
+        plan.setBackground(myblue);
+        plan.setForeground(Color.white);
+        plan.setOpaque(true);
+        plan.setBorderPainted(false);
+        plan.setBounds(580,360,210,45);
         plan.setText("Plan Practice");
         plan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 plan.setVisible(false);
                 selectPractice.selectType(mainPanel,TypeSelect,TypeDetails);
-
                 mainPanel.setVisible(true);
-
             }
-
         });
 
         frame.add(mainPanel);

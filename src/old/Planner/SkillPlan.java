@@ -28,7 +28,7 @@ public class SkillPlan {
             labelEquipment.setText("Equipment");
             labelEquipment.setVisible(true);
             labelEquipment.setFont(font2);
-            labelEquipment.setBounds(35,150,150,120);
+            labelEquipment.setBounds(20,150,150,120);
             labelEquipment.setForeground(Color.white);
 
         JTextArea equipmentlist = new JTextArea();
@@ -40,7 +40,7 @@ public class SkillPlan {
 
         JLabel skillFocusLabel = new JLabel();
             skillFocusLabel.setVisible(true);
-            skillFocusLabel.setBounds(35,55,150,120);
+            skillFocusLabel.setBounds(25,55,150,120);
             skillFocusLabel.setText("Skill Focus");
             skillFocusLabel.setFont(font2);
             skillFocusLabel.setForeground(Color.white);
@@ -108,21 +108,21 @@ public class SkillPlan {
         JLabel stretchLabel = new JLabel();
             stretchLabel.setForeground(Color.white);
             stretchLabel.setVisible(true);
-            stretchLabel.setBounds(125,75,100,100);
+            stretchLabel.setBounds(125,75,200,100);
             stretchLabel.setText("Stretch Order");
             stretchLabel.setFont(font2);
 
         JLabel conditionLabel = new JLabel();
             conditionLabel.setForeground(Color.white);
             conditionLabel.setVisible(true);
-            conditionLabel.setBounds(425,75,100,100);
+            conditionLabel.setBounds(425,75,200,100);
             conditionLabel.setText("Conditioning");
             conditionLabel.setFont(font2);
 
         JLabel CoordinationLabel = new JLabel();
             CoordinationLabel.setForeground(Color.white);
             CoordinationLabel.setVisible(true);
-            CoordinationLabel.setBounds(700,75,150,100);
+            CoordinationLabel.setBounds(700,75,200,100);
             CoordinationLabel.setText("Coordination Order");
             CoordinationLabel.setFont(font2);
 
@@ -197,6 +197,45 @@ public class SkillPlan {
         labelMain.setBackground(Color.white);
         labelMain.setFont(font1);
 
+        JLabel warmupDrill = new JLabel();
+        warmupDrill.setText("Drill");
+        warmupDrill.setForeground(Color.white);
+        warmupDrill.setFont(font2);
+        warmupDrill.setBounds(35,100,200,50);
+        warmupDrill.setVisible(true);
+
+        JLabel drilldetailsLabel = new JLabel();
+        drilldetailsLabel.setText("Drill Details");
+        drilldetailsLabel.setForeground(Color.white);
+        drilldetailsLabel.setFont(font2);
+        drilldetailsLabel.setBounds(20,200,200,50);
+        drilldetailsLabel.setVisible(true);
+
+        JLabel noteLabel = new JLabel();
+        noteLabel.setText("Notes");
+        noteLabel.setForeground(Color.white);
+        noteLabel.setFont(font2);
+        noteLabel.setBounds(20,500,200,50);
+        noteLabel.setVisible(true);
+
+        JTextArea notes = new JTextArea();
+        notes.setVisible(true);
+        notes.setFont(font2);
+        notes.setBounds(150,500,650,100);
+        notes.setForeground(myblue);
+
+        JTextArea drilldetails = new JTextArea();
+        drilldetails.setVisible(true);
+        drilldetails.setFont(font2);
+        drilldetails.setBounds(150,200,650,250);
+        drilldetails.setForeground(myblue);
+
+        JTextArea drillname = new JTextArea();
+        drillname.setVisible(true);
+        drillname.setFont(font2);
+        drillname.setBounds(150,100,400,35);
+        drillname.setForeground(myblue);
+
         JButton next = new JButton();
 
         next.setVisible(true);
@@ -227,6 +266,12 @@ public class SkillPlan {
             }
         });
 
+        TypeSelect.add(notes);
+        TypeSelect.add(noteLabel);
+        TypeSelect.add(drilldetailsLabel);
+        TypeSelect.add(drillname);
+        TypeSelect.add(drilldetails);
+        TypeSelect.add(warmupDrill);
         TypeSelect.add(back);
         TypeSelect.add(next);
         TypeSelect.add(labelMain);
@@ -242,7 +287,6 @@ public class SkillPlan {
         labelMain.setForeground(Color.white);
         labelMain.setBackground(Color.white);
         labelMain.setFont(font1);
-
 
         JButton next = new JButton();
 
