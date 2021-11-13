@@ -104,9 +104,11 @@ public class PracticeFormat {
         JButton select = new JButton();
 
         select.setVisible(false);
-        select.setBackground(myblue);
-        select.setForeground(Color.white);
         select.setText("Select");
+        select.setBackground(myblue);
+        select.setOpaque(true);
+        select.setBorderPainted(false);
+        select.setForeground(Color.white);
         select.setBounds(400,600,120,45);
 
         skillPractice.addActionListener(new ActionListener() {

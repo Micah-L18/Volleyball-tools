@@ -48,6 +48,8 @@ public class PracticePlanner {
         practiceDetails.setText("Practice Details");
         practiceDetails.setBounds(50,25,200,50);
         practiceDetails.setBackground(myblue);
+        practiceDetails.setOpaque(true);
+        practiceDetails.setBorderPainted(false);
         practiceDetails.setForeground(Color.white);
         practiceDetails.addActionListener(new ActionListener() {
             @Override
@@ -56,11 +58,12 @@ public class PracticePlanner {
                 planable.details(TypeSelect);
             }
         });
-
         prePracticePlan.setVisible(true);
         prePracticePlan.setText("Pre Practice");
         prePracticePlan.setBounds(50,100,200,50);
         prePracticePlan.setBackground(myblue);
+        prePracticePlan.setOpaque(true);
+        prePracticePlan.setBorderPainted(false);
         prePracticePlan.setForeground(Color.white);
         prePracticePlan.addActionListener(new ActionListener() {
             @Override
@@ -69,11 +72,12 @@ public class PracticePlanner {
                 planable.prePractice(TypeSelect);
             }
         });
-
         warmUpPlan.setVisible(true);
         warmUpPlan.setText("Warmup");
         warmUpPlan.setBounds(50,175,200,50);
         warmUpPlan.setBackground(myblue);
+        warmUpPlan.setOpaque(true);
+        warmUpPlan.setBorderPainted(false);
         warmUpPlan.setForeground(Color.white);
         warmUpPlan.addActionListener(new ActionListener() {
             @Override
@@ -86,6 +90,8 @@ public class PracticePlanner {
         skillPlan.setText("Skill Discuss");
         skillPlan.setBounds(50,250,200,50);
         skillPlan.setBackground(myblue);
+        skillPlan.setOpaque(true);
+        skillPlan.setBorderPainted(false);
         skillPlan.setForeground(Color.white);
         skillPlan.addActionListener(new ActionListener() {
             @Override
@@ -99,6 +105,8 @@ public class PracticePlanner {
         trainingPlan.setText("training");
         trainingPlan.setBounds(50,325,200,50);
         trainingPlan.setBackground(myblue);
+        trainingPlan.setOpaque(true);
+        trainingPlan.setBorderPainted(false);
         trainingPlan.setForeground(Color.white);
         trainingPlan.addActionListener(new ActionListener() {
             @Override
@@ -107,11 +115,12 @@ public class PracticePlanner {
                 planable.training(TypeSelect);
             }
         });
-
         skillcontrolPlan.setVisible(true);
         skillcontrolPlan.setText("Skill Control");
         skillcontrolPlan.setBounds(50,400,200,50);
         skillcontrolPlan.setBackground(myblue);
+        skillcontrolPlan.setOpaque(true);
+        skillcontrolPlan.setBorderPainted(false);
         skillcontrolPlan.setForeground(Color.white);
         skillcontrolPlan.addActionListener(new ActionListener() {
             @Override
@@ -125,6 +134,8 @@ public class PracticePlanner {
         skillexacutePlan.setText("Skill Exacute");
         skillexacutePlan.setBounds(50,475,200,50);
         skillexacutePlan.setBackground(myblue);
+        skillexacutePlan.setOpaque(true);
+        skillexacutePlan.setBorderPainted(false);
         skillexacutePlan.setForeground(Color.white);
         skillexacutePlan.addActionListener(new ActionListener() {
             @Override
@@ -137,6 +148,8 @@ public class PracticePlanner {
         implementskillPlan.setText("Implement Skill");
         implementskillPlan.setBounds(50,550,200,50);
         implementskillPlan.setBackground(myblue);
+        implementskillPlan.setOpaque(true);
+        implementskillPlan.setBorderPainted(false);
         implementskillPlan.setForeground(Color.white);
         implementskillPlan.addActionListener(new ActionListener() {
             @Override
@@ -149,6 +162,8 @@ public class PracticePlanner {
         playPlan.setText("Play");
         playPlan.setBounds(50,625,200,50);
         playPlan.setBackground(myblue);
+        playPlan.setOpaque(true);
+        playPlan.setBorderPainted(false);
         playPlan.setForeground(Color.white);
         playPlan.addActionListener(new ActionListener() {
             @Override

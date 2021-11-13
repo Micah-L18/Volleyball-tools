@@ -44,7 +44,7 @@ public class PlanPractice {
         prePracticePlan.setVisible(true);
         prePracticePlan.setText("Pre Practice");
         prePracticePlan.setBounds(50,100,200,50);
-        prePracticePlan.setBackground(myblue);
+        prePracticePlan.setBackground(Color.blue);
         prePracticePlan.setForeground(Color.white);
         prePracticePlan.addActionListener(new ActionListener() {
             @Override
