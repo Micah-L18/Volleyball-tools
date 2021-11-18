@@ -51,7 +51,7 @@ public class Main {
         plan.setForeground(Color.white);
         plan.setOpaque(true);
         plan.setBorderPainted(false);
-        plan.setBounds(580,360,210,45);
+        plan.setBounds(525,360,210,45);
         plan.setText("Plan Practice");
         plan.addActionListener(new ActionListener() {
             @Override
