@@ -1,10 +1,12 @@
-package old.Planner;
+package Code.PracticeFormatDetails;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class SkillPlan {
     //look at these fonts?
@@ -15,9 +17,10 @@ public class SkillPlan {
 
     Color myblue = new Color(0, 36, 172);
 
-    public String Details_Skill;
-    public String Details_Equipment;
-    public String Details_Notes;
+    public String Details_Skill ="";
+    public String Details_Equipment="";
+    public String Details_Notes="";
+    public String Details_Date="";
 
     public void details(JPanel TypeSelect){
 
@@ -51,6 +54,22 @@ public class SkillPlan {
             equipmentlist.setBounds(125,200,750,100);
             equipmentlist.setForeground(myblue);
             equipmentlist.setBackground(Color.white);
+
+        JLabel dateLabel = new JLabel();
+            dateLabel.setVisible(true);
+            dateLabel.setBounds(550,55,150,120);
+            dateLabel.setText("Date");
+            dateLabel.setFont(font2);
+            dateLabel.setForeground(Color.white);
+            dateLabel.setBackground(Color.white);
+
+        JTextField dateText = new JTextField();
+            dateText.setVisible(true);
+            dateText.setFont(font2);
+            dateText.setText(Details_Date);
+            dateText.setBounds(600,100,150,30);
+            dateText.setForeground(myblue);
+            dateText.setBackground(Color.white);
 
         JLabel skillFocusLabel = new JLabel();
             skillFocusLabel.setVisible(true);
@@ -94,6 +113,7 @@ public class SkillPlan {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     //save inputs
+                    Details_Date = dateText.getText();
                     Details_Skill = skillFocus.getText();
                     Details_Notes = notes.getText();
                     Details_Equipment = equipmentlist.getText();
@@ -102,6 +122,8 @@ public class SkillPlan {
                 }
             });
 
+        TypeSelect.add(dateLabel);
+        TypeSelect.add(dateText);
         TypeSelect.add(equipmentlist);
         TypeSelect.add(labelEquipment);
         TypeSelect.add(notelabel);
@@ -114,9 +136,9 @@ public class SkillPlan {
 
     }
 
-    public String PrePractice_Streatch;
-    public String PrePractice_Condition;
-    public String PrePractice_Coordination;
+    public String PrePractice_Streatch="";
+    public String PrePractice_Condition="";
+    public String PrePractice_Coordination="";
 
     public void prePractice(JPanel TypeSelect){
         JLabel skill = new JLabel();
@@ -225,9 +247,9 @@ public class SkillPlan {
 
     }
 
-    public String Warmup_drill;
-    public String Warmup_details;
-    public String Warmup_notes;
+    public String Warmup_drill="";
+    public String Warmup_details="";
+    public String Warmup_notes="";
 
     public void warmup(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
@@ -281,7 +303,7 @@ public class SkillPlan {
         drilldetails.setForeground(myblue);
         drilldetails.setText(Warmup_details);
 
-        JTextArea drillname = new JTextArea();
+        JTextField drillname = new JTextField();
         drillname.setVisible(true);
         drillname.setFont(font2);
         drillname.setBounds(150,100,400,35);
@@ -336,10 +358,10 @@ public class SkillPlan {
 
     }
 
-    public String Skill_tech;
-    public String Skill_footwork;
-    public String Skill_fun;
-    public String Skill_notes;
+    public String Skill_tech="";
+    public String Skill_footwork="";
+    public String Skill_fun="";
+    public String Skill_notes="";
 
     public void skill(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
@@ -456,9 +478,9 @@ public class SkillPlan {
         TypeSelect.repaint();
     }
 
-    public String Train_drill;
-    public String Train_details;
-    public String Train_notes;
+    public String Train_drill="";
+    public String Train_details="";
+    public String Train_notes="";
 
     public void training(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
@@ -511,7 +533,7 @@ public class SkillPlan {
         drilldetails.setForeground(myblue);
 
 
-        JTextArea drillname = new JTextArea();
+        JTextField drillname = new JTextField();
         drillname.setVisible(true);
         drillname.setFont(font2);
         drillname.setBounds(150,100,400,35);
@@ -567,9 +589,9 @@ public class SkillPlan {
 
     }
 
-    public String Control_notes;
-    public String Control_drill;
-    public String Control_details;
+    public String Control_notes="";
+    public String Control_drill="";
+    public String Control_details="";
 
     public void control(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
@@ -621,7 +643,7 @@ public class SkillPlan {
         drilldetails.setBounds(150,200,650,250);
         drilldetails.setForeground(myblue);
 
-        JTextArea drillname = new JTextArea();
+        JTextField drillname = new JTextField();
         drillname.setVisible(true);
         drillname.setFont(font2);
         drillname.setBounds(150,100,400,35);
@@ -675,9 +697,9 @@ public class SkillPlan {
         TypeSelect.repaint();
     }
 
-    public String Exacute_drill;
-    public String Exacute_details;
-    public String Exacute_notes;
+    public String Exacute_drill="";
+    public String Exacute_details="";
+    public String Exacute_notes="";
 
     public void execute(JPanel TypeSelect){
         JLabel labelMain = new JLabel();
@@ -729,7 +751,7 @@ public class SkillPlan {
         drilldetails.setBounds(150,200,650,250);
         drilldetails.setForeground(myblue);
 
-        JTextArea drillname = new JTextArea();
+        JTextField drillname = new JTextField();
         drillname.setVisible(true);
         drillname.setFont(font2);
         drillname.setBounds(150,100,400,35);
@@ -785,9 +807,9 @@ public class SkillPlan {
 
     }
 
-    public String Imp_drill;
-    public String Imp_details;
-    public String Imp_notes;
+    public String Imp_drill="";
+    public String Imp_details="";
+    public String Imp_notes="";
 
     public void impalement(JPanel TypeSelect) {
         JLabel labelMain = new JLabel();
@@ -839,7 +861,7 @@ public class SkillPlan {
         drilldetails.setBounds(150,200,650,250);
         drilldetails.setForeground(myblue);
 
-        JTextArea drillname = new JTextArea();
+        JTextField drillname = new JTextField();
         drillname.setVisible(true);
         drillname.setFont(font2);
         drillname.setBounds(150,100,400,35);
@@ -896,9 +918,9 @@ public class SkillPlan {
         TypeSelect.repaint();
     }
 
-    public String Play_TeamB;
-    public String Play_TeamA;
-    public String Play_notes;
+    public String Play_TeamB="";
+    public String Play_TeamA="";
+    public String Play_notes="";
 
     public void play(JPanel TypeSelect){
         JLabel skill = new JLabel();
@@ -1002,16 +1024,140 @@ public class SkillPlan {
         TypeSelect.repaint();
     }
 
+    public String Plans;
+
     public void Preivew(){
         JFrame previewFrame = new JFrame();
-
+            previewFrame.setLayout(null);
+            previewFrame.setVisible(true);
+            previewFrame.setSize(600,720);
+            previewFrame.setResizable(false);
+            previewFrame.setTitle("Preview");
         //make a scrollable view of documents
         //fill
 
-        previewFrame.setLayout(null);
-        previewFrame.setVisible(true);
-        previewFrame.setSize(600,720);
-        previewFrame.setResizable(false);
+        JTextArea formatedPractice = new JTextArea(50,10);
+        formatedPractice.setText(
+                        "Practice Plan ( " + Details_Date+")"+
+                        "\n"+"\n"+
+                        "\nSkill: "+Details_Skill+"\n"+
+
+                        "\nEquipment: "+ "\n"+Details_Equipment+"\n"+
+                        "\nPractice Notes: "+ "\n"+Details_Notes+"\n"+
+                        "\n"+
+                        "\nStretch: "+ "\n"+PrePractice_Streatch+"\n"+
+                        "\nCondition: "+ "\n"+PrePractice_Condition+"\n"+
+                        "\nCoordination: "+ "\n"+PrePractice_Coordination+"\n"+
+                        "\n"+
+                        "\nWarmup Drill: "+Warmup_drill+"\n"+
+                        "\nWarmup Details: "+ "\n"+Warmup_details+"\n"+
+                        "\nWarmup Notes: "+ "\n"+Warmup_notes +"\n"+
+                        "\n"+
+                        "\nFocus Fundamentals: "+ "\n"+Skill_fun +"\n"+
+                        "\nFocus Footwork: "+ "\n"+Skill_footwork +"\n"+
+                        "\nFocus Technique: "+ "\n"+Skill_tech +"\n"+
+                        "\nFocus Notes: "+ "\n"+Skill_notes +"\n"+
+                        "\n"+
+                        "\nTraining Drill: "+Train_drill+"\n"+
+                        "\nTraining Details: "+ "\n"+Train_details+"\n"+
+                        "\nTraining Notes: "+ "\n"+Train_notes +"\n"+
+                        "\n"+
+                        "\nControl Drill: "+Control_drill+"\n"+
+                        "\nControl Details: "+ "\n"+Control_details+"\n"+
+                        "\nControl notes: "+ "\n"+Control_notes +"\n"+
+                        "\n"+
+                        "\nExecute Drill: "+Exacute_drill+"\n"+
+                        "\nExecute Details: "+ "\n"+Exacute_details+"\n"+
+                        "\nExecute Notes: "+ "\n"+Exacute_notes+"\n"+
+                        "\n"+
+                        "\nImplement Drill: "+Imp_drill+"\n"+
+                        "\nImplement Details: "+ "\n"+Imp_details+"\n"+
+                        "\nImplement Notes: "+ "\n"+Imp_notes+"\n"+
+                        "\n"+
+                        "\nTeam A: "+ "\n"+Play_TeamA+"\n"+
+                        "\nTeam B: "+ "\n"+Play_TeamB+"\n"+
+                        "\nScrimmage Notes: "+ "\n"+Play_notes
+
+        );
+        formatedPractice.setVisible(true);
+        formatedPractice.getScrollableTracksViewportHeight();
+        formatedPractice.setFont(font2);
+        formatedPractice.setForeground(myblue);
+        formatedPractice.setBounds(10,10,580,625);
+        formatedPractice.setEditable(false);
+
+        JScrollPane scrollPane = new JScrollPane(formatedPractice);
+        scrollPane.setVisible(true);
+        scrollPane.setBounds(0,0,600,625);
+
+        JButton Save = new JButton();
+            Save.setVisible(true);
+            Save.setForeground(Color.white);
+            Save.setBackground(myblue);
+            Save.setText("Save");
+            Save.setOpaque(true);
+            Save.setBorderPainted(false);
+            Save.setBounds(315,650,100,35);
+            Save.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    Plans = formatedPractice.getText();
+                    //System.out.println(Plans);
+
+                    JFrame parentFrame = new JFrame();
+
+                    JFileChooser fileChooser = new JFileChooser();
+                    fileChooser.setDialogTitle("Specify a file to save");
+
+                    int userSelection = fileChooser.showSaveDialog(parentFrame);
+
+                    if (userSelection == JFileChooser.APPROVE_OPTION) {
+                        File fileToSave = fileChooser.getSelectedFile();
+                        System.out.println("Save as file: " + fileToSave.getAbsolutePath());
+
+
+                        try {
+
+                            FileWriter myWriter = new FileWriter(fileToSave.getAbsolutePath()+".txt");
+
+                            myWriter.write(Plans);
+                            myWriter.close();
+                            System.out.println("Successfully wrote to the file.");
+
+
+                        } catch (IOException a) {
+                            // System.out.println("An error occurred.");
+                            a.printStackTrace();
+                        }
+
+                    }
+                   //previewFrame.setVisible(false);
+
+                }
+            });
+
+
+        JButton Cancel = new JButton();
+        Cancel.setVisible(true);
+        Cancel.setForeground(Color.white);
+        Cancel.setBackground(myblue);
+        Cancel.setText("Cancel");
+        Cancel.setOpaque(true);
+        Cancel.setBorderPainted(false);
+        Cancel.setBounds(185,650,100,35);
+        Cancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                previewFrame.setVisible(false);
+
+            }
+        });
+
+        previewFrame.add(scrollPane);
+        previewFrame.add(Cancel);
+        previewFrame.add(Save);
 
     }
 }

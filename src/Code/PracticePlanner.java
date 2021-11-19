@@ -1,6 +1,6 @@
-package old.TestingStuff;
+package Code;
 
-import old.Planner.SkillPlan;
+import Code.PracticeFormatDetails.SkillPlan;
 
 import javax.swing.*;
 import java.awt.*;
@@ -131,7 +131,7 @@ public class PracticePlanner {
         });
 
         skillexacutePlan.setVisible(true);
-        skillexacutePlan.setText("Skill Exacute");
+        skillexacutePlan.setText("Skill Execute");
         skillexacutePlan.setBounds(50,475,200,50);
         skillexacutePlan.setBackground(myblue);
         skillexacutePlan.setOpaque(true);

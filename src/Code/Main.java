@@ -1,6 +1,4 @@
-package old;
-
-import old.PanelManager.PracticeFormat;
+package Code;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,7 +21,7 @@ public class Main {
 
         Color myblue = new Color(0, 36, 172);
 
-        PracticeFormat selectPractice = new PracticeFormat();
+        PracticeTypes selectPractice = new PracticeTypes();
 
         mainPanel = new JPanel();
 

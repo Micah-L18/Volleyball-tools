@@ -1,18 +1,16 @@
-package old.PanelManager;
-
-import old.PracticeType.PracticeSelect;
+package Code;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class PracticeFormat {
+public class PracticeTypes {
     /*
     scrollable panel on left
     press button = larger panel on right displays format, with a select button at the bottum
      */
-    PracticeSelect SP = new PracticeSelect();
+    PracticePreview SP = new PracticePreview();
     int bob = 0;
     public void selectType(JPanel mainPanel, JPanel TypeSelect,JPanel TypeDetails){
 
