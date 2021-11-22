@@ -1,6 +1,7 @@
 package Code;
 
 import Code.PracticeFormatDetails.SkillPlan;
+import Code.PracticeFormatDetails.SpeedPlan;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,7 +27,6 @@ public class PracticePlanner {
     JLabel practiceType = new JLabel();
 
     public void planSkill(JPanel TypeDetails, JPanel TypeSelect){
-
         SkillPlan planable = new SkillPlan();
 
         TypeSelect.setBounds(300,0,980,720);
@@ -182,6 +182,89 @@ public class PracticePlanner {
         TypeDetails.add(skillexacutePlan);
         TypeDetails.add(implementskillPlan);
         TypeDetails.add(playPlan);
+    }
+
+    public void planSpeed(JPanel TypeDetails, JPanel TypeSelect){
+
+        SpeedPlan planable = new SpeedPlan();
+
+        TypeSelect.setBounds(300,0,980,720);
+        TypeSelect.removeAll();
+
+        practiceType.setText("Skill Practice");
+        practiceType.setVisible(true);
+        practiceType.setLayout(null);
+        practiceType.setBounds(5,5,120,35);
+        practiceType.setForeground(Color.white);
+
+        TypeDetails.setBounds(0,0,300,720);
+        TypeDetails.setLayout(null);
+        TypeDetails.removeAll();
+
+        planable.details(TypeSelect);
+
+        practiceDetails.setVisible(true);
+        practiceDetails.setText("Practice Details");
+        practiceDetails.setBounds(50,25,200,50);
+        practiceDetails.setBackground(myblue);
+        practiceDetails.setOpaque(true);
+        practiceDetails.setBorderPainted(false);
+        practiceDetails.setForeground(Color.white);
+        practiceDetails.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TypeSelect.removeAll();
+                planable.details(TypeSelect);
+            }
+        });
+        prePracticePlan.setVisible(true);
+        prePracticePlan.setText("Pre Practice");
+        prePracticePlan.setBounds(50,100,200,50);
+        prePracticePlan.setBackground(myblue);
+        prePracticePlan.setOpaque(true);
+        prePracticePlan.setBorderPainted(false);
+        prePracticePlan.setForeground(Color.white);
+        prePracticePlan.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TypeSelect.removeAll();
+                planable.prePractice(TypeSelect);
+            }
+        });
+
+        TypeDetails.add(practiceDetails);
+        TypeDetails.add(prePracticePlan);
+        TypeDetails.add(warmUpPlan);
+        TypeDetails.add(skillPlan);
+        TypeDetails.add(trainingPlan);
+        TypeDetails.add(skillcontrolPlan);
+        TypeDetails.add(skillexacutePlan);
+        TypeDetails.add(implementskillPlan);
+        TypeDetails.add(playPlan);
+    }
+
+    public void planLight(JPanel TypeDetails, JPanel TypeSelect){
+
+    }
+
+    public void planHeavy(JPanel TypeDetails, JPanel TypeSelect){
+
+    }
+
+    public void planPreTourn(JPanel TypeDetails, JPanel TypeSelect){
+
+    }
+
+    public void planPostTourn(JPanel TypeDetails, JPanel TypeSelect){
+
+    }
+
+    public void planSystem(JPanel TypeDetails, JPanel TypeSelect){
+
+    }
+
+    public void planTeam(JPanel TypeDetails, JPanel TypeSelect){
+
     }
 
 }

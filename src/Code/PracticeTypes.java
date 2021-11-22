@@ -170,7 +170,6 @@ public class PracticeTypes {
             public void actionPerformed(ActionEvent e) {
                 SP.speedPractice(finalTypeDetails,finalTypeSelect,select);
                 select.setVisible(true);
-
             }
         });
 

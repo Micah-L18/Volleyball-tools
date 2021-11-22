@@ -1038,46 +1038,94 @@ public class SkillPlan {
 
         JTextArea formatedPractice = new JTextArea(50,10);
         formatedPractice.setText(
-                        "Practice Plan ( " + Details_Date+")"+
-                        "\n"+"\n"+
-                        "\nSkill: "+Details_Skill+"\n"+
-
-                        "\nEquipment: "+ "\n"+Details_Equipment+"\n"+
-                        "\nPractice Notes: "+ "\n"+Details_Notes+"\n"+
+                        "Practice Plan ("+ Details_Date+")"+
+                                "\n"+
+                                "\n"+
+                        "\nSkill: "+Details_Skill+
+                                "\n"+
+                        "\n"+"Equipment: "+
+                                "\n"+Details_Equipment+
+                                "\n"+
+                        "\n"+"Practice Notes: "+
+                                "\n"+Details_Notes+
+                                "\n"+
+                                "\n"+
+                        "\nStretch: "+
+                                "\n"+PrePractice_Streatch+
+                                "\n"+
+                        "\nCondition: "+
+                                "\n"+PrePractice_Condition+
+                                "\n"+
+                        "\nCoordination: "+
+                                "\n"+PrePractice_Coordination+
+                                "\n"+
+                                "\n"+
+                        "\nWarmup Drill: "+ Warmup_drill+
+                                "\n"+
+                        "\nWarmup Details: "+
+                                "\n"+Warmup_details+
+                                "\n"+
+                        "\nWarmup Notes: "+
+                                "\n"+Warmup_notes+
+                                "\n"+
+                                "\n"+
+                        "\nFocus Fundamentals: "+
+                                "\n"+Skill_fun +
+                                "\n"+
+                        "\nFocus Footwork: "+
+                                "\n"+Skill_footwork +
+                                "\n"+
+                        "\nFocus Technique: "+
+                                "\n"+Skill_tech +
+                                "\n"+
+                        "\nFocus Notes: "+
+                                "\n"+Skill_notes +
+                                "\n"+
                         "\n"+
-                        "\nStretch: "+ "\n"+PrePractice_Streatch+"\n"+
-                        "\nCondition: "+ "\n"+PrePractice_Condition+"\n"+
-                        "\nCoordination: "+ "\n"+PrePractice_Coordination+"\n"+
+                        "\nTraining Drill: "+Train_drill+
+                                "\n"+
+                        "\nTraining Details: "+
+                                "\n"+Train_details+
+                                "\n"+
+                        "\nTraining Notes: "+
+                                "\n"+Train_notes +
+                                "\n"+
+                                "\n"+
+                        "\nControl Drill: "+Control_drill+
+                                "\n"+
+                        "\nControl Details: "+
+                                "\n"+Control_details+
+                                "\n"+
+                        "\nControl notes: "+
+                                "\n"+Control_notes +
+                                "\n"+
+                                "\n"+
+                        "\nExecute Drill: "+Exacute_drill+
+                                "\n"+
+                        "\nExecute Details: "+
+                                "\n"+Exacute_details+
+                                "\n"+
+                        "\nExecute Notes: "+
+                                "\n"+Exacute_notes+
+                                "\n"+
+                                "\n"+
+                        "\nImplement Drill: "+Imp_drill+
+                                "\n"+
+                        "\nImplement Details: "+
+                                "\n"+Imp_details+
+                                "\n"+
+                        "\nImplement Notes: "+
+                                "\n"+Imp_notes+
+                                "\n"+
                         "\n"+
-                        "\nWarmup Drill: "+Warmup_drill+"\n"+
-                        "\nWarmup Details: "+ "\n"+Warmup_details+"\n"+
-                        "\nWarmup Notes: "+ "\n"+Warmup_notes +"\n"+
-                        "\n"+
-                        "\nFocus Fundamentals: "+ "\n"+Skill_fun +"\n"+
-                        "\nFocus Footwork: "+ "\n"+Skill_footwork +"\n"+
-                        "\nFocus Technique: "+ "\n"+Skill_tech +"\n"+
-                        "\nFocus Notes: "+ "\n"+Skill_notes +"\n"+
-                        "\n"+
-                        "\nTraining Drill: "+Train_drill+"\n"+
-                        "\nTraining Details: "+ "\n"+Train_details+"\n"+
-                        "\nTraining Notes: "+ "\n"+Train_notes +"\n"+
-                        "\n"+
-                        "\nControl Drill: "+Control_drill+"\n"+
-                        "\nControl Details: "+ "\n"+Control_details+"\n"+
-                        "\nControl notes: "+ "\n"+Control_notes +"\n"+
-                        "\n"+
-                        "\nExecute Drill: "+Exacute_drill+"\n"+
-                        "\nExecute Details: "+ "\n"+Exacute_details+"\n"+
-                        "\nExecute Notes: "+ "\n"+Exacute_notes+"\n"+
-                        "\n"+
-                        "\nImplement Drill: "+Imp_drill+"\n"+
-                        "\nImplement Details: "+ "\n"+Imp_details+"\n"+
-                        "\nImplement Notes: "+ "\n"+Imp_notes+"\n"+
-                        "\n"+
-                        "\nTeam A: "+ "\n"+Play_TeamA+"\n"+
-                        "\nTeam B: "+ "\n"+Play_TeamB+"\n"+
-                        "\nScrimmage Notes: "+ "\n"+Play_notes
-
+                        "\nTeam A: "+
+                                "\n"+Play_TeamA+
+                                "\n"+
+                        "\nTeam B: "+
+                                "\n"+Play_TeamB+
+                                "\n"+
+                        "\nScrimmage Notes: "+
+                                "\n"+Play_notes
         );
         formatedPractice.setVisible(true);
         formatedPractice.getScrollableTracksViewportHeight();
@@ -1116,7 +1164,6 @@ public class SkillPlan {
                         File fileToSave = fileChooser.getSelectedFile();
                         System.out.println("Save as file: " + fileToSave.getAbsolutePath());
 
-
                         try {
 
                             FileWriter myWriter = new FileWriter(fileToSave.getAbsolutePath()+".txt");
@@ -1124,7 +1171,6 @@ public class SkillPlan {
                             myWriter.write(Plans);
                             myWriter.close();
                             System.out.println("Successfully wrote to the file.");
-
 
                         } catch (IOException a) {
                             // System.out.println("An error occurred.");
@@ -1160,4 +1206,5 @@ public class SkillPlan {
         previewFrame.add(Save);
 
     }
+
 }

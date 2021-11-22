@@ -33,7 +33,7 @@ public class Main {
         JFrame frame = new JFrame();
 
         frame.setVisible(true);
-        frame.setIconImage(icon);
+       // frame.setIconImage(icon);
         frame.setSize(1280,720);
         frame.setResizable(false);
         frame.setBackground(myblue);
